@@ -1,0 +1,238 @@
+
+.numberCircle {
+    display: inline-block;
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
+
+.formHeadText{
+    font-size: 2em;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+#main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+#header {
+    position: relative;
+    background-color: #ab1b03;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    margin-bottom: 0px;
+    -moz-box-shadow: inset 0px -7px 20px -10px #000000;
+    -webkit-box-shadow: inset 0px -7px 20px -10px #000000;
+    box-shadow: inset 0px -7px 20px -10px #000000;
+}
+#backBtn {
+    min-width: 160px;
+    width: 15%;
+    background-color: #e1e1e1;
+    color: #AB1B03;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 1px solid #761100;
+    font-weight: bold;
+    text-shadow: none;
+ }
+
+#formTitle {
+    vertical-align: middle;
+    line-height: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.16);
+    color: #AB1B03;
+    font-size: 30px;
+    margin-bottom: 0px;
+    background: #ededed; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ededed 0%, #ffffff 50%, #ededed 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ededed 0%,#ffffff 50%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ededed 0%,#ffffff 50%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+#formContainer {
+    background-color: rgb(171, 27, 3);
+    padding: 10px;
+    -moz-box-shadow: inset 0px 7px 20px -10px #000000;
+    -webkit-box-shadow: inset 0px 7px 20px -10px #000000;
+    box-shadow: inset 0px 7px 20px -10px #000000;
+    min-height: 300px;
+    position: relative;
+}
+
+.main-container{
+    max-width: 400px;
+    min-height: 300px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    border-bottom: none;
+    -webkit-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
+}
+
+.form-style-5{
+    max-width: 500px;
+    min-height: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    border-bottom: none;
+    -webkit-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color: #851303;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 15px;
+
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #AB1B03;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #AB1B03;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #851303;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: rgba(223, 107, 83, 0.95)
+}
+
+.effect7
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 20px rgba(0, 0, 0, 0.5), 0 0 43px rgba(0, 0, 0, 0.1) inset;
+
+}
+.effect7:before, .effect7:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect7:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+    -moz-transform:skew(8deg) rotate(3deg);
+    -ms-transform:skew(8deg) rotate(3deg);
+    -o-transform:skew(8deg) rotate(3deg);
+    transform:skew(8deg) rotate(3deg);
+}

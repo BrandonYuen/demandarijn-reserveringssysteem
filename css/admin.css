@@ -1,0 +1,23 @@
+
+
+body{
+    background-color: #f4f4f4;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 4px;
+    font-size: 1.2em;
+}
+table,
+th,
+td {
+    border: 1px solid #cecfd5;
+}
+th,
+td {
+    padding: 5px 5px;
+}
+
+#pagination{
+    font-size: 1.5em;
+}
