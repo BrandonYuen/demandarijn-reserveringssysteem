@@ -121,4 +121,31 @@
             //Show next page
             $showPage = "success";
             break;
+
     }
+
+	//Javascript Injection Protection
+	if (isset($datum)){
+		$datum = htmlentities($datum);
+	}
+	if (isset($tijd)){
+		$tijd = htmlentities($tijd);
+	}
+	if (isset($aantal_personen)){
+		$aantal_personen = htmlentities($aantal_personen);
+	}
+	if (isset($tafelnummer)){
+		$tafelnummer = htmlentities($tafelnummer);
+	}
+	if (isset($name)){
+		$name = htmlentities($name);
+	}
+	if (isset($email)){
+		$email = htmlentities($email);
+	}
+	if (isset($telefoonnummer)){
+		$telefoonnummer = htmlentities($telefoonnummer);
+	}
+	if (isset($toevoegingen)){
+		$toevoegingen = htmlentities($toevoegingen);
+	}

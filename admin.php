@@ -80,14 +80,14 @@
         <tbody>
         <?php foreach ($reserveringen as $reservering): ?>
             <tr>
-                <td><?= $reservering->datum; ?></td>
-                <td><?= $reservering->tijd; ?></td>
-                <td><?= $reservering->aantal_personen; ?></td>
-                <td><?= $reservering->tafelnummer; ?></td>
-                <td><?= $reservering->name; ?></td>
-                <td><?= $reservering->email; ?></td>
-                <td><?= $reservering->telefoonnummer; ?></td>
-                <td><?= $reservering->toevoegingen; ?></td>
+                <td><?= htmlentities($reservering->datum); ?></td>
+                <td><?= htmlentities($reservering->tijd); ?></td>
+                <td><?= htmlentities($reservering->aantal_personen); ?></td>
+                <td><?= htmlentities($reservering->tafelnummer); ?></td>
+                <td><?= htmlentities($reservering->name); ?></td>
+                <td><?= htmlentities($reservering->email); ?></td>
+                <td><?= htmlentities($reservering->telefoonnummer); ?></td>
+                <td><?= htmlentities($reservering->toevoegingen); ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

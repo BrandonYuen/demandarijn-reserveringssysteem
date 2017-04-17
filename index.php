@@ -54,7 +54,7 @@
 
     <div id="formContainer">
         <?php if (!($showPage == "step1" || $showPage == "success")): ?>
-            <a id ="backBtn" class="btn btn-default" href="../reserveringssysteem/index.php" role="button"><span class="glyphicon glyphicon-chevron-left"></span>Opnieuw</a>
+            <a id ="backBtn" class="btn btn-default" href="index.php" role="button"><span class="glyphicon glyphicon-chevron-left"></span>Opnieuw</a>
         <?php endif; ?>
     <!-- Content van de stap / container -->
         <?php if ($showPage == "step1"): ?>
