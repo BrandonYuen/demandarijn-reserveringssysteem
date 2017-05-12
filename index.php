@@ -33,8 +33,8 @@
 <div id="main" class="effect7">
 
     <div id="header" class="jumbotron text-center">
-        <h1>Online Reserveren</h1>
-        <p>Makkelijk en snel reserveren.</p>
+        <h1>De Mandarijn</h1>
+        <p>Online Reserveren</p>
     </div>
 
     <!-- Stappen title / header -->
