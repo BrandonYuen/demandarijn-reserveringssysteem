@@ -4,9 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Mandarijn - Reserveren</title>
 
     <!--Libraries-->
@@ -23,6 +21,10 @@
 
     <!--CSS-->
     <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/form.css" rel="stylesheet" type="text/css" />
+    <link href="css/shadows.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="images/favicon.ico" />
 </head>
 
 <body>
@@ -30,35 +32,35 @@
     <span class="error"><?= $error; ?></span>
 <?php endif; ?>
 
+<!--Main container-->
 <div id="main" class="effect7">
 
-    <div id="header" class="jumbotron text-center">
-        <h1>De Mandarijn</h1>
-        <p>Online Reserveren</p>
+    <div id="header" class="header">
+		<div>
+			<h1>De Mandarijn</h1>
+			<h3>Online Reserveren</h3>
+		</div>
     </div>
 
-    <!-- Stappen title / header -->
+    <!-- Steps title / header -->
     <div id="formTitle" class="text-center">
         <?php if ($showPage == "step1"): ?>
-            <div class="numberCircle">1</div> Kies een datum en tijd.
+            <div class="numberCircle">1</div> &nbsp;<h3>Kies een datum en tijd.</h3>
         <?php elseif ($showPage == "step2"): ?>
-            <div class="numberCircle">2</div> Kies een tafel.
+            <div class="numberCircle">2</div> &nbsp;<h3>Kies een tafel.</h3>
         <?php elseif ($showPage == "step3"): ?>
-            <div class="numberCircle">3</div> Vul uw gegevens in.
+            <div class="numberCircle">3</div> &nbsp;<h3>Vul uw gegevens in.</h3>
         <?php elseif ($showPage == "step4"): ?>
-            <div class="numberCircle">4</div> Bevestig uw reservering.
+            <div class="numberCircle">4</div> &nbsp;<h3>Bevestig uw reservering.</h3>
         <?php elseif ($showPage == "success"): ?>
             Bedankt voor het reserveren!
         <?php endif; ?>
     </div>
 
     <div id="formContainer">
-        <?php if (!($showPage == "step1" || $showPage == "success")): ?>
-            <a id ="backBtn" class="btn btn-default" href="index.php" role="button"><span class="glyphicon glyphicon-chevron-left"></span>Opnieuw</a>
-        <?php endif; ?>
     <!-- Content van de stap / container -->
         <?php if ($showPage == "step1"): ?>
-            <div class="form-style-5">
+            <div class="form-reserveren">
                 <form method="post">
                     <fieldset>
                         <label for="datum">Kies een datum</label>
@@ -90,11 +92,11 @@
             </div>
 
         <?php elseif ($showPage == "step2"): ?>
-            <div class="form-style-5">
+            <div class="form-reserveren">
                 <form method="post">
                     <fieldset>
                         <label for="tafel">Kies een tafel</label>
-                        <img src="images/plattegrond_tafels.jpg" width="460px"><br><br>
+                        <img src="images/plattegrond_tafels.jpg" width="100%"><br><br>
                         <select id="tafelnummer" name="tafelnummer">
                             <option value="1">Tafel 1</option>
                             <option value="2">Tafel 2</option>
@@ -119,7 +121,7 @@
             </div>
 
         <?php elseif ($showPage == "step3"): ?>
-            <div class="form-style-5">
+            <div class="form-reserveren">
                 <form method="post">
                     <fieldset>
                         <label for="name">Naam*</label>
@@ -137,7 +139,7 @@
             </div>
 
         <?php elseif ($showPage == "step4"): ?>
-            <div class="form-style-5">
+            <div class="form-reserveren">
                 <form method="post">
                     <fieldset>
                         <label for="name">Kloppen de onderstaade gegevens?</label>

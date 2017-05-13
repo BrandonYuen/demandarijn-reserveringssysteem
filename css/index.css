@@ -1,10 +1,31 @@
 
+
+h1{
+	font-size: 4em;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+}
+
+h3{
+	font-size: 2em;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+}
+.centered{
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .numberCircle {
     display: inline-block;
     border-radius: 50%;
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 
     width: 60px;
+	min-width: 60px;
     height: 60px;
     padding: 10px;
 
@@ -22,7 +43,8 @@
 
 body{
     background-color: #f4f4f4;
-	background-image: url("../images/wallpapergardenlake.jpg")
+	background-image: url("../images/wallpapergardenlake.jpg");
+	font-size: 14px;
 }
 
 #main {
@@ -32,18 +54,25 @@ body{
     margin-right: auto;
     width: 80%;
     max-width: 962px;
+	height: 100%;
 }
 
 #header {
     position: relative;
     background-color: #ab1b03;
 	background-image: url("../images/food1.jpg");
+	height: 200px;
     color: #ffffff;
     text-shadow: 1px 1px #000000;
+	text-align: center;
     margin-bottom: 0px;
     -moz-box-shadow: inset 0px -7px 20px -10px #000000;
     -webkit-box-shadow: inset 0px -7px 20px -10px #000000;
     box-shadow: inset 0px -7px 20px -10px #000000;
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
 }
 #backBtn {
     min-width: 160px;
@@ -59,18 +88,20 @@ body{
  }
 
 #formTitle {
-    vertical-align: middle;
-    line-height: 100px;
+    text-align: center;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.16);
     color: #AB1B03;
-    font-size: 30px;
     margin-bottom: 0px;
     background: #ededed; /* Old browsers */
     background: -moz-linear-gradient(top,  #ededed 0%, #ffffff 50%, #ededed 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  #ededed 0%,#ffffff 50%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  #ededed 0%,#ffffff 50%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
 
 }
 
@@ -98,110 +129,4 @@ body{
     -webkit-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
     -moz-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
     box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
-}
-
-.form-style-5{
-    max-width: 500px;
-    min-height: 500px;
-    padding: 10px 20px;
-    background: #f4f7f8;
-    margin: 10px auto;
-    padding: 20px;
-    background: #f4f7f8;
-    border-radius: 8px;
-    border-bottom: none;
-    -webkit-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
-    -moz-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
-    box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.66);
-}
-.form-style-5 fieldset{
-    border: none;
-}
-.form-style-5 legend {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-.form-style-5 label {
-    display: block;
-    margin-bottom: 8px;
-}
-.form-style-5 input[type="text"],
-.form-style-5 input[type="date"],
-.form-style-5 input[type="datetime"],
-.form-style-5 input[type="email"],
-.form-style-5 input[type="number"],
-.form-style-5 input[type="search"],
-.form-style-5 input[type="time"],
-.form-style-5 input[type="url"],
-.form-style-5 textarea,
-.form-style-5 select {
-    background: rgba(255,255,255,.1);
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 0;
-    outline: 0;
-    padding: 7px;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color: #851303;
-    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    margin-bottom: 15px;
-
-}
-.form-style-5 input[type="text"]:focus,
-.form-style-5 input[type="date"]:focus,
-.form-style-5 input[type="datetime"]:focus,
-.form-style-5 input[type="email"]:focus,
-.form-style-5 input[type="number"]:focus,
-.form-style-5 input[type="search"]:focus,
-.form-style-5 input[type="time"]:focus,
-.form-style-5 input[type="url"]:focus,
-.form-style-5 textarea:focus,
-.form-style-5 select:focus{
-    background: #d2d9dd;
-}
-.form-style-5 select{
-    -webkit-appearance: menulist-button;
-    height:35px;
-}
-.form-style-5 .number {
-    background: #AB1B03;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-    border-radius: 15px 15px 15px 0px;
-}
-
-.form-style-5 input[type="submit"],
-.form-style-5 input[type="button"]
-{
-    position: relative;
-    display: block;
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    margin: 0 auto;
-    background: #AB1B03;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #851303;
-    border-width: 1px 1px 3px;
-    margin-bottom: 10px;
-}
-.form-style-5 input[type="submit"]:hover,
-.form-style-5 input[type="button"]:hover
-{
-    background: rgba(223, 107, 83, 0.95)
 }
