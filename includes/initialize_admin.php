@@ -2,8 +2,13 @@
 require_once "settings.php";
 require_once "classes/Databases/Database.php";
 require_once "classes/Reserveringen/Reservering.php";
+require 'libraries/carbon/carbon.php';
+
+use Carbon\Carbon;
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
 try {
     //New DB connection
     $db = new \Reserveringen\Databases\Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -29,10 +34,10 @@ try {
     }
 
     //Setup page vars for display.
-    $page_prev = $page - 1;                          //previous page is page - 1
-    $page_next = $page + 1;                          //next page is page + 1
-    $page_last = ceil($total_rows/$limit);      //page_last is = total pages / items per page, rounded up.
-    $page_last_m1 = $page_last - 1;                      //last page minus 1
+    $page_prev = $page - 1;                          	//previous page is page - 1
+    $page_next = $page + 1;                          	//next page is page + 1
+    $page_last = ceil($total_rows/$limit);      		//page_last is = total pages / items per page, rounded up.
+	$page_last_m1 = $page_last - 1;                    	//last page minus 1
 
     //Get students from DB
     if ($page == "today"){

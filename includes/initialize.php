@@ -1,6 +1,9 @@
 <?php
     require_once "settings.php";
     require_once "classes/Databases/Database.php";
+	require 'libraries/carbon/carbon.php';
+
+	use Carbon\Carbon;
 
     ini_set('display_errors', -1);
     session_start();
@@ -103,6 +106,9 @@
             $telefoonnummer = ($_POST["telefoonnummer"]);
             $toevoegingen = ($_POST["toevoegingen"]);
 
+			//Get current DateTime
+			$creationdatetime = Carbon::now();
+
 
             try {
                 //New DB connection
@@ -110,7 +116,7 @@
                 $connection = $db->getConnection();
 
                 //Insert new reservering into database
-                $db->insert($datum,$tijd,$aantal_personen,$tafelnummer,$name,$email,$telefoonnummer,$toevoegingen);
+                $db->insert($datum,$tijd,$aantal_personen,$tafelnummer,$name,$email,$telefoonnummer,$toevoegingen,$creationdatetime);
 
             } catch (Exception $e) {
                 //Set error variable for template

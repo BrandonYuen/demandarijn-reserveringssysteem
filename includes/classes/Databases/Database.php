@@ -52,9 +52,47 @@ class Database
     }
 
 	//Nieuwe reservering inserten in de database
-    public function insert($datum,$tijd,$aantal_personen,$tafelnummer,$name,$email,$telefoonnummer,$toevoegingen)
+    public function insert($datum,$tijd,$aantal_personen,$tafelnummer,$name,$email,$telefoonnummer,$toevoegingen,$creationdatetime)
     {
-        $stmt = $this->connection->prepare("INSERT INTO reserveringen (datum, tijd, aantal_personen, tafelnummer, name, email, telefoonnummer, toevoegingen) VALUES (:datum, :tijd, :aantal_personen, :tafelnummer, :name, :email, :telefoonnummer, :toevoegingen)");
+		//Get datetime
+
+        $stmt = $this->connection->prepare("INSERT INTO reserveringen (datum, tijd, aantal_personen, tafelnummer, name, email, telefoonnummer, toevoegingen, creationdatetime) VALUES (:datum, :tijd, :aantal_personen, :tafelnummer, :name, :email, :telefoonnummer, :toevoegingen, :creationdatetime)");
+        $stmt->bindParam(':datum', $datum);
+        $stmt->bindParam(':tijd', $tijd);
+        $stmt->bindParam(':aantal_personen', $aantal_personen);
+        $stmt->bindParam(':tafelnummer', $tafelnummer);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':telefoonnummer', $telefoonnummer);
+        $stmt->bindParam(':toevoegingen', $toevoegingen);
+        $stmt->bindParam(':creationdatetime', $creationdatetime);
+        $stmt->execute();
+    }
+
+	//Bestaande reservering verwijderen bij ID
+    public function deleteById($rId)
+    {
+        $stmt = $this->connection->prepare("DELETE from reserveringen WHERE id = :rId");
+        $stmt->bindParam(':rId', $rId);
+        $stmt->execute();
+    }
+
+	//Update bestaande reservering bij ID
+    public function updateById($id,$datum,$tijd,$aantal_personen,$tafelnummer,$name,$email,$telefoonnummer,$toevoegingen)
+    {
+        $stmt = $this->connection->prepare(
+			"UPDATE reserveringen
+			SET datum = :datum,
+				tijd = :tijd,
+				aantal_personen = :aantal_personen,
+				tafelnummer = :tafelnummer,
+				name = :name,
+				email = :email,
+				telefoonnummer = :telefoonnummer,
+				toevoegingen = :toevoegingen
+			WHERE id = :id"
+		);
+        $stmt->bindParam(':id', $id);
         $stmt->bindParam(':datum', $datum);
         $stmt->bindParam(':tijd', $tijd);
         $stmt->bindParam(':aantal_personen', $aantal_personen);

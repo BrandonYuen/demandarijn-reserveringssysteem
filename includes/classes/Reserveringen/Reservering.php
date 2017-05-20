@@ -7,8 +7,9 @@ class Reservering
     public $tijd;
     public $aantal_personen;
     public $tafelnummer;
-    public $naam;
+    public $name;
     public $email;
     public $telefoonnummer;
     public $toevoegingen;
+    public $creationdatetime;
 }

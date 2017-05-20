@@ -1,4 +1,7 @@
-<?php require_once "includes/initialize_admin.php"; ?> <!--//Initialise admin core code-->
+<?php require_once "includes/initialize_admin.php";
+require_once 'libraries/carbon/carbon.php';
+
+use Carbon\Carbon; ?> <!--//Initialise admin core code-->
 <!doctype html>
 <html lang="en">
 
@@ -67,14 +70,16 @@
     <table width="100%">
         <thead>
         <tr>
-            <th width="10%">Datum</th>
-            <th width="10%">Tijd</th>
+            <th width="8%">Datum</th>
+            <th width="5%">Tijd</th>
             <th width="2%">Personen</th>
             <th width="2%">Tafelnummer</th>
-            <th width="20%">Naam</th>
+            <th width="10%">Naam</th>
             <th width="10%">Email</th>
             <th width="10%">Telefoonnummer</th>
             <th width="30%">Toevoegingen</th>
+            <th width="10%">Geplaatst</th>
+            <th width="15%">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -88,6 +93,32 @@
                 <td><?= htmlentities($reservering->email); ?></td>
                 <td><?= htmlentities($reservering->telefoonnummer); ?></td>
                 <td><?= htmlentities($reservering->toevoegingen); ?></td>
+                <td><?php
+					//If creation date exists
+					if ($reservering->creationdatetime != NULL){
+						$daysAgo = Carbon::parse($reservering->creationdatetime)->diffInDays(Carbon::now());
+						if ($daysAgo > 0){
+							echo $daysAgo. " dagen geleden";
+						}
+						else{
+							$hoursAgo = Carbon::parse($reservering->creationdatetime)->diffInHours(Carbon::now());
+							if ($hoursAgo > 0){
+								echo $hoursAgo. " uren geleden";
+							}
+							else{
+								$minutesAgo = Carbon::parse($reservering->creationdatetime)->diffInMinutes(Carbon::now());
+								if ($minutesAgo > 0){
+									echo $minutesAgo. " minuten geleden";
+								}
+								else{
+									$secondsAgo = Carbon::parse($reservering->creationdatetime)->diffInSeconds(Carbon::now());
+									echo $secondsAgo. " seconden geleden";
+								}
+							}
+						}
+					}
+				?></td>
+                <td>  <a href="delete.php?page=<?=$page?>&id=<?= htmlentities($reservering->id)?>">DELETE <span class="glyphicon glyphicon-trash"></span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="edit.php?page=<?=$page?>&id=<?= htmlentities($reservering->id)?>">EDIT <span class="glyphicon glyphicon-pencil"></span></a> </td>
             </tr>
         <?php endforeach; ?>
         </tbody>

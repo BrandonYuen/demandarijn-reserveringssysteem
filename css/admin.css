@@ -2,16 +2,17 @@
 
 body{
     background-color: #f4f4f4;
+	background-image: url("../images/wallpapergardenlake.jpg");
 }
 table {
     border-collapse: separate;
-    border-spacing: 4px;
     font-size: 1.2em;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-table,
 th,
 td {
-    border: 1px solid #cecfd5;
+    border: 3px solid rgba(163, 125, 78, 0.5);
 }
 th,
 td {
